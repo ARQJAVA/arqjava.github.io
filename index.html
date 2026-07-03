@@ -351,6 +351,30 @@
     #sticky-banner button { background:none; border:none; color:rgba(255,255,255,0.6); cursor:pointer; font-size:1rem; margin-left:auto; padding:.2rem .4rem; }
     @media(max-width:600px) { #sticky-banner { flex-wrap:wrap; gap:.5rem; font-size:.75rem; padding:.5rem 1rem; } }
 
+
+    /* ── TIPOS DE CONSTRUCCIÓN ── */
+    .tipos-construccion { padding: 5.5rem 2.5rem; background: var(--azul-oscuro); position: relative; overflow: hidden; }
+    .tipos-construccion::before { content: ''; position: absolute; top: -120px; left: -120px; width: 500px; height: 500px; background: radial-gradient(circle, rgba(30,111,217,0.12), transparent 70%); pointer-events: none; }
+    .tipos-construccion::after  { content: ''; position: absolute; bottom: -100px; right: -100px; width: 400px; height: 400px; background: radial-gradient(circle, rgba(79,195,247,0.08), transparent 70%); pointer-events: none; }
+    .tipos-inner { max-width: 1100px; margin: 0 auto; position: relative; z-index: 2; }
+    .tipos-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.8rem; margin-top: 3.5rem; }
+    .tipo-card { background: rgba(255,255,255,0.04); border: 1px solid rgba(79,195,247,0.15); border-radius: 16px; overflow: hidden; transition: transform .3s, box-shadow .3s; cursor: pointer; }
+    .tipo-card:hover { transform: translateY(-6px); box-shadow: 0 16px 48px rgba(0,0,0,0.3); border-color: rgba(79,195,247,0.4); }
+    .tipo-img { height: 200px; position: relative; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+    .tipo-img img { width: 100%; height: 100%; object-fit: cover; transition: transform .4s; }
+    .tipo-card:hover .tipo-img img { transform: scale(1.05); }
+    .tipo-img-overlay { position: absolute; inset: 0; background: linear-gradient(to bottom, transparent 40%, rgba(13,31,60,0.85) 100%); }
+    .tipo-badge { position: absolute; top: 1rem; left: 1rem; background: var(--azul-vivo); color: #fff; font-family: var(--font-display); font-size: .68rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; padding: .3rem .8rem; border-radius: 20px; }
+    .tipo-body { padding: 1.6rem; }
+    .tipo-body h3 { font-family: var(--font-display); font-size: 1.15rem; font-weight: 900; color: #fff; margin-bottom: .6rem; }
+    .tipo-body p { font-size: .88rem; color: rgba(255,255,255,0.65); line-height: 1.65; margin-bottom: 1.2rem; }
+    .tipo-pros { display: flex; flex-direction: column; gap: .4rem; margin-bottom: 1.2rem; }
+    .tipo-pro { display: flex; align-items: center; gap: .6rem; font-size: .82rem; color: rgba(255,255,255,0.8); }
+    .tipo-pro i { color: #4FC3F7; font-size: .75rem; flex-shrink: 0; }
+    .tipo-ideal { font-family: var(--font-display); font-size: .7rem; letter-spacing: .1em; text-transform: uppercase; color: var(--azul-claro); border-top: 1px solid rgba(79,195,247,0.15); padding-top: 1rem; margin-top: .2rem; }
+    .tipo-ideal span { color: rgba(255,255,255,0.55); font-family: var(--font-body); text-transform: none; letter-spacing: 0; font-size: .82rem; display: block; margin-top: .2rem; }
+    @media(max-width: 900px) { .tipos-grid { grid-template-columns: 1fr; gap: 1.2rem; } .tipo-img { height: 160px; } }
+
   </style>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 </head>
@@ -362,6 +386,7 @@
     </a>
     <ul class="nav-links" id="navLinks">
       <li><a href="#servicios">Servicios</a></li>
+      <li><a href="#tipos-construccion">Construcción</a></li>
       <li><a href="#proceso">Proceso</a></li>
       <li><a href="#portafolio">Portafolio</a></li>
       <li><a href="#nosotros">Nosotros</a></li>
@@ -485,6 +510,141 @@
       </a>
     </div>
   </section>
+
+  <!-- ── TIPOS DE CONSTRUCCIÓN ── -->
+  <section class="tipos-construccion" id="tipos-construccion">
+    <div class="tipos-inner">
+      <div class="section-header reveal">
+        <span class="section-tag">Elige tu sistema constructivo</span>
+        <h2 class="section-title">¿Cómo quieres construir?</h2>
+        <p class="section-desc">Cada proyecto tiene un sistema constructivo ideal. Te asesoramos para elegir el que mejor se adapta a tu presupuesto, terreno y tiempo de entrega.</p>
+      </div>
+      <div class="tipos-grid">
+
+        <!-- CONCRETO -->
+        <div class="tipo-card reveal">
+          <div class="tipo-img">
+            <svg viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;background:linear-gradient(135deg,#1a2a4a,#0d1f3c)">
+  <rect x="40" y="140" width="320" height="14" fill="#2d5a9e" rx="3"/>
+  <rect x="50" y="80" width="14" height="60" fill="#2d5a9e" rx="2"/>
+  <rect x="186" y="80" width="14" height="60" fill="#2d5a9e" rx="2"/>
+  <rect x="336" y="80" width="14" height="60" fill="#2d5a9e" rx="2"/>
+  <rect x="40" y="70" width="320" height="14" fill="#3d7bd4" rx="3"/>
+  <rect x="50" y="20" width="14" height="52" fill="#2d5a9e" rx="2"/>
+  <rect x="186" y="20" width="14" height="52" fill="#2d5a9e" rx="2"/>
+  <rect x="336" y="20" width="14" height="52" fill="#2d5a9e" rx="2"/>
+  <rect x="40" y="10" width="320" height="14" fill="#3d7bd4" rx="3"/>
+  <rect x="74" y="90" width="102" height="50" fill="#1e3a6b" rx="2"/>
+  <rect x="224" y="90" width="102" height="50" fill="#1e3a6b" rx="2"/>
+  <rect x="74" y="30" width="44" height="30" fill="#1e3a6b" rx="2"/>
+  <rect x="130" y="30" width="44" height="30" fill="#4FC3F7" opacity=".3" rx="2"/>
+  <rect x="224" y="30" width="44" height="30" fill="#1e3a6b" rx="2"/>
+  <rect x="280" y="30" width="44" height="30" fill="#4FC3F7" opacity=".3" rx="2"/>
+  <text x="200" y="185" text-anchor="middle" font-family="Arial" font-size="11" fill="#4FC3F7" opacity=".8">ESTRUCTURA EN CONCRETO REFORZADO</text>
+</svg>
+            <div class="tipo-img-overlay"></div>
+            <span class="tipo-badge">Más usado</span>
+          </div>
+          <div class="tipo-body">
+            <h3>Concreto Tradicional</h3>
+            <p>Sistema aporticado con columnas, vigas y losas en concreto reforzado. El método más consolidado en Colombia, con décadas de desempeño probado en Santander.</p>
+            <div class="tipo-pros">
+              <div class="tipo-pro"><i class="fa-solid fa-circle-check"></i> Máxima durabilidad y resistencia sísmica</div>
+              <div class="tipo-pro"><i class="fa-solid fa-circle-check"></i> Bajo mantenimiento a largo plazo</div>
+              <div class="tipo-pro"><i class="fa-solid fa-circle-check"></i> Alta valorización del inmueble</div>
+              <div class="tipo-pro"><i class="fa-solid fa-circle-check"></i> Materiales disponibles localmente</div>
+            </div>
+            <div class="tipo-ideal">Ideal para<span>Viviendas unifamiliares, edificios residenciales y obras institucionales que requieren larga vida útil.</span></div>
+          </div>
+        </div>
+
+        <!-- ACERO -->
+        <div class="tipo-card reveal">
+          <div class="tipo-img">
+            <svg viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;background:linear-gradient(135deg,#1a3040,#0d2030)">
+  <line x1="60" y1="155" x2="60" y2="30" stroke="#5ba3d0" stroke-width="4" stroke-linecap="round"/>
+  <line x1="200" y1="155" x2="200" y2="10" stroke="#5ba3d0" stroke-width="4" stroke-linecap="round"/>
+  <line x1="340" y1="155" x2="340" y2="30" stroke="#5ba3d0" stroke-width="4" stroke-linecap="round"/>
+  <line x1="55" y1="155" x2="345" y2="155" stroke="#4FC3F7" stroke-width="5" stroke-linecap="round"/>
+  <line x1="60" y1="30" x2="200" y2="10" stroke="#4FC3F7" stroke-width="3.5" stroke-linecap="round"/>
+  <line x1="200" y1="10" x2="340" y2="30" stroke="#4FC3F7" stroke-width="3.5" stroke-linecap="round"/>
+  <line x1="60" y1="92" x2="340" y2="92" stroke="#3d7bd4" stroke-width="3" stroke-linecap="round"/>
+  <line x1="60" y1="30" x2="200" y2="92" stroke="#2d5a9e" stroke-width="2" stroke-dasharray="6,4"/>
+  <line x1="340" y1="30" x2="200" y2="92" stroke="#2d5a9e" stroke-width="2" stroke-dasharray="6,4"/>
+  <line x1="130" y1="20" x2="130" y2="155" stroke="#3d7bd4" stroke-width="2.5"/>
+  <line x1="270" y1="20" x2="270" y2="155" stroke="#3d7bd4" stroke-width="2.5"/>
+  <circle cx="60" cy="30" r="5" fill="#4FC3F7"/>
+  <circle cx="200" cy="10" r="5" fill="#4FC3F7"/>
+  <circle cx="340" cy="30" r="5" fill="#4FC3F7"/>
+  <circle cx="60" cy="92" r="4" fill="#3d7bd4"/>
+  <circle cx="340" cy="92" r="4" fill="#3d7bd4"/>
+  <text x="200" y="185" text-anchor="middle" font-family="Arial" font-size="11" fill="#4FC3F7" opacity=".8">ESTRUCTURA METÁLICA EN ACERO</text>
+</svg>
+            <div class="tipo-img-overlay"></div>
+            <span class="tipo-badge" style="background:#1a8a5a;">Más rápido</span>
+          </div>
+          <div class="tipo-body">
+            <h3>Estructura Metálica</h3>
+            <p>Estructura en perfiles de acero laminado o tubular. Permite cubrir grandes luces sin columnas intermedias, ideal para espacios amplios y abiertos.</p>
+            <div class="tipo-pros">
+              <div class="tipo-pro"><i class="fa-solid fa-circle-check"></i> Hasta 40% más rápido que el concreto</div>
+              <div class="tipo-pro"><i class="fa-solid fa-circle-check"></i> Grandes luces sin columnas (12–30 m)</div>
+              <div class="tipo-pro"><i class="fa-solid fa-circle-check"></i> Peso estructural reducido</div>
+              <div class="tipo-pro"><i class="fa-solid fa-circle-check"></i> Ampliaciones y modificaciones fáciles</div>
+            </div>
+            <div class="tipo-ideal">Ideal para<span>Bodegas, galpones, hoteles, centros comerciales y proyectos donde el tiempo de entrega es crítico.</span></div>
+          </div>
+        </div>
+
+        <!-- PREFABRICADO -->
+        <div class="tipo-card reveal">
+          <div class="tipo-img">
+            <svg viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;background:linear-gradient(135deg,#1a2040,#0d1a3c)">
+  <rect x="40" y="60" width="70" height="90" fill="#1e3a6b" stroke="#3d7bd4" stroke-width="2" rx="2"/>
+  <rect x="120" y="40" width="70" height="110" fill="#1e3a6b" stroke="#3d7bd4" stroke-width="2" rx="2"/>
+  <rect x="200" y="55" width="70" height="95" fill="#1e3a6b" stroke="#3d7bd4" stroke-width="2" rx="2"/>
+  <rect x="280" y="45" width="70" height="105" fill="#1e3a6b" stroke="#3d7bd4" stroke-width="2" rx="2"/>
+  <rect x="40" y="60" width="70" height="8" fill="#3d7bd4" rx="1"/>
+  <rect x="120" y="40" width="70" height="8" fill="#3d7bd4" rx="1"/>
+  <rect x="200" y="55" width="70" height="8" fill="#3d7bd4" rx="1"/>
+  <rect x="280" y="45" width="70" height="8" fill="#3d7bd4" rx="1"/>
+  <rect x="55" y="90" width="40" height="35" fill="#4FC3F7" opacity=".2" rx="1"/>
+  <rect x="135" y="75" width="40" height="50" fill="#4FC3F7" opacity=".2" rx="1"/>
+  <rect x="215" y="85" width="40" height="40" fill="#4FC3F7" opacity=".2" rx="1"/>
+  <rect x="295" y="78" width="40" height="45" fill="#4FC3F7" opacity=".2" rx="1"/>
+  <line x1="110" y1="60" x2="120" y2="40" stroke="#4FC3F7" stroke-width="1.5" stroke-dasharray="4,3" opacity=".6"/>
+  <line x1="190" y1="60" x2="200" y2="55" stroke="#4FC3F7" stroke-width="1.5" stroke-dasharray="4,3" opacity=".6"/>
+  <line x1="270" y1="60" x2="280" y2="45" stroke="#4FC3F7" stroke-width="1.5" stroke-dasharray="4,3" opacity=".6"/>
+  <rect x="30" y="148" width="330" height="6" fill="#2d5a9e" rx="2"/>
+  <text x="200" y="185" text-anchor="middle" font-family="Arial" font-size="11" fill="#4FC3F7" opacity=".8">SISTEMA CONSTRUCTIVO PREFABRICADO</text>
+</svg>
+            <div class="tipo-img-overlay"></div>
+            <span class="tipo-badge" style="background:#7c3aed;">Más económico</span>
+          </div>
+          <div class="tipo-body">
+            <h3>Prefabricado</h3>
+            <p>Paneles y elementos fabricados en planta y ensamblados en sitio. Reduce desperdicios, controla la calidad desde fábrica y acelera la ejecución en obra.</p>
+            <div class="tipo-pros">
+              <div class="tipo-pro"><i class="fa-solid fa-circle-check"></i> Menor desperdicio de materiales</div>
+              <div class="tipo-pro"><i class="fa-solid fa-circle-check"></i> Calidad controlada desde fábrica</div>
+              <div class="tipo-pro"><i class="fa-solid fa-circle-check"></i> Montaje rápido y limpio en sitio</div>
+              <div class="tipo-pro"><i class="fa-solid fa-circle-check"></i> Escalable y modular</div>
+            </div>
+            <div class="tipo-ideal">Ideal para<span>Vivienda rural, proyectos sociales, programas de vivienda en serie y construcciones en zonas de difícil acceso.</span></div>
+          </div>
+        </div>
+
+      </div>
+      <!-- CTA -->
+      <div style="text-align:center;margin-top:3rem;" class="reveal">
+        <p style="color:rgba(255,255,255,0.55);margin-bottom:1.2rem;font-size:.95rem;">No sabe cuál elegir — en el diagnóstico gratuito le recomendamos el sistema ideal para su proyecto y presupuesto.</p>
+        <a href="#oferta" class="btn-primary" style="font-size:1rem;padding:.9rem 2.4rem;">
+          <i class="fa-solid fa-compass-drafting"></i> Asesoría gratuita de sistema constructivo
+        </a>
+      </div>
+    </div>
+  </section>
+
 
   <!-- ── CÓMO TRABAJAMOS ── -->
   <section class="proceso" id="proceso">
@@ -1440,68 +1600,34 @@
 
 
   <script>
+(function () {
 
-(function() {
-  var WA = '573163227277';
-  var msgs = document.getElementById('jchatMsgs');
-  var inp  = document.getElementById('jchatInp');
-  var open = false;
-  var st   = { step:'inicio', nombre:'', tel:'', proy:'', area:0 };
+  // ══ CONFIGURACIÓN ═══════════════════════════════════════════════════════════
+  var GEMINI_KEY = 'PEGAR_CLAVE_AQUI';
+  var GEMINI_MODEL = 'gemini-2.0-flash';
+  var GEMINI_URL = 'https://generativelanguage.googleapis.com/v1beta/models/'
+    + GEMINI_MODEL + ':generateContent?key=' + GEMINI_KEY;
 
-  // Horario real
-  var hora  = new Date().getHours();
-  var dia   = new Date().getDay(); // 0=dom, 6=sab
-  var esHabil = dia >= 1 && dia <= 6;
-  var dentroHorario = esHabil && hora >= 8 && hora < 18;
-  var cupos = [2,2,2,2,2,1,1][dia];
+  var SYSTEM_PROMPT = 'Eres el asistente virtual del Arq. Javier Valero, director de Disenos Java Construccion SAS en Bucaramanga, Santander, Colombia.\n\nSOBRE LA EMPRESA:\n- 30 anos de experiencia en arquitectura y construccion en Santander\n- Matricula profesional No. 6870049957 - Consejo Profesional de Santander\n- Servicio integrado: diseno Y construccion en un solo equipo, sin intermediarios\n- Javier dirige personalmente cada obra — precio fijo desde el contrato, sin sorpresas\n- Zonas: Bucaramanga, Floridablanca, Giron, Piedecuesta, Barrancabermeja, Palmas del Socorro\n- WhatsApp: 3163227277\n\nSERVICIOS Y PRECIOS (referencia COP por m2):\n- Estructura residencial: $900k a $1.2M/m2\n- Estructura comercial: $1M a $1.4M/m2\n- Estructura institucional: $850k a $1.15M/m2\n- Acabados basicos: +$300k-400k/m2\n- Acabados medios: +$450k-600k/m2\n- Acabados altos: +$650k-850k/m2\n- Acabados lujo: +$900k-1.2M/m2\n- Factor 2 pisos: x1.8 sobre estructura\n- Honorarios diseno: 8% a 12% del valor de obra\n- Pagos: 30% anticipo, 30% estructura, 30% acabados, 10% entrega\n\nPROYECTOS REALIZADOS:\n- Sierra Imperial: residencial 120m2, 2026, Ruitoque\n- Ruitoque Nautica: residencial 450m2, 2013\n- Familia Nunez: vivienda de lujo\n- Hotel San Juan Internacional: capilla + centro de convenciones, Bucaramanga\n- Hotel San Juan de Giron: remodelacion fachada y recepcion\n- Edificio Bizancio: uso mixto, Constructora Everes\n- Ferreteria La Casita: comercial, Floridablanca\n- Cabildo indigena: complejo arquitectonico Sierra Nevada\n- Palacio Municipal Palmas del Socorro: obra publica\n- Planta de tratamiento Palmas del Socorro: consultoria\n- Programa vivienda rural Landazuri: consultoria\n\nTESTIMONIOS:\n- Wilson Ariel Castellanos: "respetaron mi presupuesto y entregaron en el tiempo prometido"\n- Dr. Alexander Arrieta (Consultorio Medico): "el resultado supero todas mis expectativas"\n- Arnulfo Ballesteros (Hotel San Juan): obra de la mas alta calidad\n- Jose Luis Ballesteros (Ferreteria La Casita): precio final sin cambios\n\nDIAGNOSTICO GRATUITO (oferta principal):\nIncluye: evaluacion tecnica, estimado de inversion real, proximos pasos claros. Sin compromiso.\n\nINSTRUCCIONES DE COMPORTAMIENTO:\n1. Habla en primera persona como si FUERAS el Arq. Javier Valero\n2. Tono: calido, directo, experto. Como un arquitecto de confianza hablando con un amigo\n3. Respuestas CORTAS: maximo 4 lineas. El cliente esta en un chat, no leyendo un articulo\n4. Cuando calcules costos usa los rangos reales de esta informacion\n5. Menciona testimonios reales cuando el cliente dude o objete\n6. Cuando el cliente quiera avanzar o agendar, escribe exactamente ##LEAD## al final\n7. Nunca inventes datos, proyectos ni precios que no esten aqui\n8. Si no sabes algo, di que el arquitecto lo responde directamente por WhatsApp\n9. No uses markdown (no asteriscos, no guiones) — el chat los maneja por separado\n10. Siempre termina sugiriendo el diagnostico GRATUITO cuando sea apropiado';
 
-  // Nombre corto para personalizar
-  function nombre() { return st.nombre ? st.nombre.split(' ')[0] : ''; }
-  function hola()   { return st.nombre ? ('**' + nombre() + '**, ') : ''; }
+  // ══ ESTADO ══════════════════════════════════════════════════════════════════
+  var msgs   = document.getElementById('jchatMsgs');
+  var inp    = document.getElementById('jchatInp');
+  var open   = false;
+  var st     = { step: 'chat', nombre: '', tel: '' };
+  var history = [];
+  var hora   = new Date().getHours();
+  var dia    = new Date().getDay();
+  var dentroHorario = dia >= 1 && dia <= 6 && hora >= 8 && hora < 18;
 
-  // Testimonios reales expandidos
-  var TESTIMONIOS = [
-    { cita: 'Wilson Castellanos me dijo que tenia las mismas dudas que tu. Hoy vive en su casa, terminada en tiempo y con el presupuesto que acordamos desde el principio.', autor: 'Wilson Ariel Castellanos, cliente residencial' },
-    { cita: 'Arnulfo Ballesteros del Hotel San Juan me llamo despues de la entrega a decirme que fue la mejor decision de su empresa. Eso no tiene precio.', autor: 'Arnulfo Ballesteros, Hotel San Juan Internacional' },
-    { cita: 'Jose Luis de Ferreteria La Casita me conto que el primer mes con el local nuevo ya tenia 40% mas de ventas. Un espacio bien disenado se paga solo.', autor: 'Jose Luis Ballesteros, Ferreteria La Casita' },
-    { cita: 'El Dr. Alexander Arrieta queria su consultorio listo para una fecha especifica. Lo entregamos 5 dias antes. Asi trabajamos.', autor: 'Dr. Alexander Arrieta, Consultorio Medico' }
-  ];
-
-  function testimonio() {
-    var t = TESTIMONIOS[Math.floor(Math.random() * TESTIMONIOS.length)];
-    return '\n\nEsto me lo conto un cliente: _"' + t.cita + '"_\n— **' + t.autor + '**';
-  }
-
-  var PRECIOS = {
-    residencial:   { estr:[900000,1200000],  acab:{ basico:[300000,400000], medio:[450000,600000], alto:[650000,850000], lujo:[900000,1200000] } },
-    comercial:     { estr:[1000000,1400000], acab:{ basico:[350000,450000], medio:[500000,650000], alto:[700000,900000], lujo:[950000,1300000] } },
-    institucional: { estr:[850000,1150000],  acab:{ basico:[300000,400000], medio:[420000,580000], alto:[600000,800000], lujo:[850000,1100000] } }
-  };
-
-  function calcEstimado(tipo, acab, area, pisos) {
-    var p = PRECIOS[tipo] || PRECIOS.residencial;
-    var fP = pisos === 2 ? 1.8 : 1;
-    var eMin = Math.round(p.estr[0] * area * fP);
-    var eMax = Math.round(p.estr[1] * area * fP);
-    var nivel = p.acab[acab] || p.acab.basico;
-    var aMin = Math.round(nivel[0] * area);
-    var aMax = Math.round(nivel[1] * area);
-    return { eMin:eMin, eMax:eMax, aMin:aMin, aMax:aMax, tMin:eMin+aMin, tMax:eMax+aMax };
-  }
-
-  function fmt(n) {
-    if (n >= 1000000000) return '$' + (n/1000000000).toFixed(1) + ' MM';
-    if (n >= 1000000)    return '$' + Math.round(n/1000000) + ' M';
-    return '$' + Math.round(n/1000) + ' K';
-  }
-
+  // ══ UI ══════════════════════════════════════════════════════════════════════
   function bold(t) {
     var parts = t.split('**');
     var r = '';
     for (var i = 0; i < parts.length; i++) {
       r += i % 2 === 1 ? '<strong>' + parts[i] + '</strong>' : parts[i];
     }
-    return r.replace(/\n/g, '<br>').replace(/_"(.*?)"_/g, '<em>"$1"</em>');
+    return r.replace(/\n/g, '<br>');
   }
 
   function addMsg(t, cls) {
@@ -1517,381 +1643,163 @@
     if (!opts || !opts.length) return;
     var wrap = document.createElement('div');
     wrap.className = 'jch-opts';
-    opts.forEach(function(o) {
+    opts.forEach(function (o) {
       var b = document.createElement('button');
       b.className = 'jch-ob';
       b.textContent = o;
-      b.onclick = function() { wrap.remove(); pickOpt(o); };
+      b.onclick = function () { wrap.remove(); handleInput(o); };
       wrap.appendChild(b);
     });
     msgs.appendChild(wrap);
     msgs.scrollTop = msgs.scrollHeight;
   }
 
-  function typing(cb, delay) {
+  function showTyping() {
     var t = document.createElement('div');
     t.className = 'jch-typing';
     t.innerHTML = '<span></span><span></span><span></span>';
+    t.id = 'jch-typing-indicator';
     msgs.appendChild(t);
     msgs.scrollTop = msgs.scrollHeight;
-    setTimeout(function() { t.remove(); cb(); }, delay || 900);
+    return t;
   }
 
-  function botSay(txt, opts, delay) {
-    typing(function() { addMsg(txt, 'bot'); if (opts) addOpts(opts); }, delay);
+  function removeTyping() {
+    var t = document.getElementById('jch-typing-indicator');
+    if (t) t.remove();
   }
 
-  // ════════════════════════════════════════════════════════
-  // FLUJOS — voz cálida, primera persona, como Javier habla
-  // ════════════════════════════════════════════════════════
-
-  function flujoInicio() {
-    var txt;
-    if (!dentroHorario) {
-      var manana = dia === 5 ? 'el lunes' : dia === 6 ? 'el lunes' : 'manana';
-      txt = 'Hola! Son las ' + hora + 'h y ya termine mi jornada, pero no te vayas.\n\nSoy el asistente del **Arq. Javier Valero**. Dejame tus datos y el arquitecto te llama **' + manana + ' antes de las 9am** — eres el primero en la lista.\n\nQue tienes en mente?';
-    } else {
-      txt = 'Hola! Estamos disponibles ahora mismo.\n\nSoy el asistente del **Arq. Javier Valero** — 30 anos construyendo en Santander, sin intermediarios y con precio fijo desde el primer dia.\n\nCuentame: que proyecto tienes en mente?';
-    }
-    botSay(txt, ['Quiero construir mi casa','Tengo un proyecto comercial','Tengo un lote, que puedo hacer','Quiero remodelar','Proyecto institucional / publico','Costos y presupuesto','Hablar con el arquitecto ahora']);
+  function botSay(txt, opts) {
+    addMsg(txt, 'bot');
+    if (opts) addOpts(opts);
   }
 
-  function flujoCostos() {
-    st.step = 'costos_tipo';
-    botSay(hola() + 'Con gusto. En lugar de darte un numero generico, prefiero darte un estimado real segun tu caso.\n\nQue tipo de proyecto vas a construir?',
-      ['Casa o vivienda','Local o edificio comercial','Obra institucional o publica']);
-  }
-
-  function flujoCasa() {
-    st.step = 'casa_area';
-    botSay(hola() + 'Construir tu casa es probablemente la inversion mas importante de tu vida — y se hace una sola vez. Por eso en mi estudio no acepto atajos.\n\nTe garantizo precio fijo desde el contrato, visitas semanales de mi parte y entrega en el plazo acordado.\n\nCuantos m2 tienes en mente?',
-      ['Menos de 80 m2','80 a 150 m2','150 a 250 m2','Mas de 250 m2','No lo se aun']);
-  }
-
-  function flujoLote() {
-    st.step = 'lote';
-    st.proy = 'lote';
-    botSay(hola() + 'Tener el lote es el mejor punto de partida. Lo primero que hago es evaluar su potencial real: cuantos m2 se pueden construir, que permite la normativa y como aprovechar cada metro cuadrado.\n\nDonde esta ubicado?',
-      ['Bucaramanga','Floridablanca','Giron','Piedecuesta','Otra ciudad de Santander']);
-  }
-
-  function flujoRemodelacion() {
-    st.step = 'remodelacion';
-    st.proy = 'remodelacion';
-    botSay(hola() + 'Las remodelaciones tienen un reto especial: hay que respetar lo que existe y mejorar lo que no funciona. Antes de proponer cualquier cambio, necesito conocer la estructura actual.\n\nQue quieres transformar?',
-      ['Cocina y banos','Fachada y zonas sociales','Ampliar la vivienda','Remodelacion completa','Local o espacio comercial']);
-  }
-
-  function flujoComercial() {
-    st.step = 'comercial_tipo';
-    st.proy = 'comercial';
-    botSay(hola() + 'Un espacio comercial bien disenado no es un gasto, es una inversion que se paga sola.' + testimonio() + '\n\nQue tipo de proyecto comercial tienes?',
-      ['Hotel o hospedaje','Local o punto de venta','Centro de convenciones','Oficinas o consultorios','Bodega o planta']);
-  }
-
-  function flujoInstitucional() {
-    st.step = 'institucional';
-    st.proy = 'institucional';
-    botSay(hola() + 'Llevo 30 anos trabajando con alcaldias, cabildos indigenas y entidades del Estado en Santander. Se exactamente como se maneja la documentacion, la interventoria y la entrega para no tener glosas.\n\nQue tipo de obra publica es?',
-      ['Obra municipal o departamental','Cabildo o comunidad indigena','Planta de tratamiento o servicios','Otro contrato publico']);
-  }
-
-  function flujoCalculo(tipo, acab, area, pisos) {
-    var e = calcEstimado(tipo, acab, area, pisos);
-    var txt = hola() + 'Aqui tienes tu estimado para **' + area + ' m2** (' + pisos + ' piso' + (pisos > 1 ? 's' : '') + '):\n\n'
-      + '- Costo estructura: **' + fmt(e.eMin) + ' — ' + fmt(e.eMax) + '**\n'
-      + '- Acabados (' + acab + '): **' + fmt(e.aMin) + ' — ' + fmt(e.aMax) + '**\n'
-      + '- **Total estimado: ' + fmt(e.tMin) + ' — ' + fmt(e.tMax) + '**\n\n'
-      + 'Este rango es orientativo. En el diagnostico gratuito te doy el precio exacto — ese es el que se firma en el contrato y no cambia.';
-    botSay(txt, ['Quiero el diagnostico GRATIS','Ver proyectos que hemos construido','Tengo otra pregunta'], 1100);
-    st.step = 'post_calculo';
-  }
-
-  function flujoObjecion(tipo) {
-    if (tipo === 'caro') {
-      botSay(hola() + 'Entiendo perfectamente. Yo mismo les pregunto a mis clientes: cuanto costo el arquitecto anterior que los dejo a mitad de obra?\n\nConstruir mal sale muchisimo mas caro que construir bien desde el principio. Con nosotros el precio que acordamos es el precio que pagas — ni un peso mas.' + testimonio(),
-        ['Quiero saber el precio exacto','Agendar diagnostico GRATIS','Tengo otra pregunta']);
-    } else if (tipo === 'comparando') {
-      botSay(hola() + 'Comparar es lo mas inteligente que puedes hacer. Te digo en que somos diferentes:\n\n- Diseno y construccion en un **solo equipo** — sin subcontratos\n- **30 anos de obras entregadas** en Santander — no renders, edificios reales\n- **Precio fijo en contrato** — sin sorpresas a mitad de obra\n- Yo mismo visito tu obra cada semana — no un inspector contratado' + testimonio(),
-        ['Ver proyectos reales','Agendar diagnostico GRATIS','Cuanto tiempo toma una obra']);
-    } else if (tipo === 'tiempo') {
-      botSay(hola() + 'Te doy tiempos reales, no los que se dicen para ganar el contrato:\n\n- Casa 80–150 m2: **10 a 14 meses**\n- Casa 150–250 m2: **14 a 20 meses**\n- Local comercial: **4 a 8 meses**\n- Remodelacion: **1 a 4 meses**\n\nEl cronograma se firma en el contrato y lo cumplo. Si hay un retraso, te lo digo yo primero.',
-        ['Agendar diagnostico GRATIS','Cuanto cuesta','Tengo otra pregunta']);
-    } else if (tipo === 'licencia') {
-      botSay(hola() + 'La licencia en Bucaramanga tarda entre **60 y 120 dias habiles** segun el Curaduria y el tipo de proyecto.\n\nNosotros gestionamos todo: planos, radicacion y seguimiento. Tu no pisas ninguna oficina — yo me encargo.',
-        ['Agendar diagnostico GRATIS','Cuanto cuesta el diseno','Tengo otra pregunta']);
-    } else if (tipo === 'garantia') {
-      botSay(hola() + 'Garantias que entrego por escrito:\n\n- **Estructura:** 10 anos (ley colombiana)\n- **Obra civil:** 5 anos\n- **Acabados:** 1 ano\n\nTodo queda en el contrato. Yo firmo personalmente cada entrega — no mando a un representante.',
-        ['Agendar diagnostico GRATIS','Ver proyectos reales','Tengo otra pregunta']);
-    }
-  }
-
-  function flujoNombre() {
+  // ══ LEAD CAPTURE (hardcoded — no IA para datos críticos) ════════════════════
+  function pedirNombre() {
     st.step = 'nombre';
-    var urgencia = cupos <= 1
-      ? 'Solo queda **1 cupo** de diagnostico gratuito esta semana — y los que no lo reservan pierden la cita.'
-      : 'Esta semana tengo **' + cupos + ' cupos** disponibles para diagnostico gratuito.';
-    botSay(urgencia + '\n\nComo te llamas?', []);
+    var cupos = [2,2,2,2,2,1,1][dia];
+    var urgencia = cupos <= 1 ? 'Solo queda **1 cupo** esta semana. ' : '';
+    botSay(urgencia + 'Para conectarte con el Arq. Valero, dime tu nombre:', []);
   }
 
-  function flujoTel() {
+  function pedirTel() {
     st.step = 'tel';
-    botSay('Mucho gusto **' + nombre() + '**! Cual es tu numero de WhatsApp para que el Arq. Valero te contacte directamente?', []);
+    botSay('Perfecto **' + st.nombre.split(' ')[0] + '**! Cual es tu numero de WhatsApp?', []);
   }
 
-  function flujoFinal() {
+  function mostrarFinal() {
     st.step = 'final';
-    var cuando = dentroHorario
-      ? 'El Arq. Valero te escribe **hoy mismo**.'
-      : 'El Arq. Valero te escribe **manana en la manana**, eres el primero en su lista.';
-    botSay('Perfecto **' + nombre() + '**! ' + cuando + '\n\nTu diagnostico gratuito incluye:\n- Evaluacion tecnica de tu proyecto\n- Estimado de inversion real\n- Proximos pasos claros sin compromiso',
-      ['Conectar ahora por WhatsApp','Agregar informacion de mi proyecto']);
+    var cuando = dentroHorario ? 'hoy mismo' : 'manana en la manana';
+    botSay('Listo **' + st.nombre.split(' ')[0] + '**! El Arq. Valero te escribe **' + cuando + '**.\n\nTu diagnostico gratuito incluye:\n- Evaluacion tecnica\n- Estimado de inversion real\n- Proximos pasos claros',
+      ['Conectar ahora por WhatsApp', 'Agregar informacion del proyecto']);
   }
 
-  // ════════════════════════════════════════════════════════
-  // HANDLER PRINCIPAL
-  // ════════════════════════════════════════════════════════
+  // ══ GEMINI API ══════════════════════════════════════════════════════════════
+  function callGemini(userMsg, callback) {
+    history.push({ role: 'user', parts: [{ text: userMsg }] });
+    if (history.length > 16) history = history.slice(history.length - 16);
 
-  function pickOpt(o) {
-    addMsg(o, 'usr');
-    var ol = o.toLowerCase();
-    if (ol.indexOf('casa') > -1 || ol.indexOf('vivienda') > -1)                             { flujoCasa(); }
-    else if (ol.indexOf('lote') > -1)                                                        { flujoLote(); }
-    else if (ol.indexOf('remodelar') > -1 || ol.indexOf('remodelacion') > -1)                { flujoRemodelacion(); }
-    else if (ol.indexOf('comercial') > -1)                                                   { flujoComercial(); }
-    else if (ol.indexOf('institucional') > -1 || ol.indexOf('publico') > -1)                 { flujoInstitucional(); }
-    else if (ol.indexOf('costo') > -1 || ol.indexOf('presupuesto') > -1)                     { flujoCostos(); }
-    else if (ol.indexOf('arquitecto') > -1 || ol.indexOf('hablar') > -1)                     { flujoNombre(); }
-    else if (ol.indexOf('whatsapp') > -1 && st.step === 'final') {
-      var msg = encodeURIComponent('Hola Arq. Javier, soy ' + st.nombre + '. Tel: ' + st.tel + '. Proyecto: ' + (st.proy || 'por definir') + '. Quiero el diagnostico gratuito.');
-      window.open('https://wa.me/' + WA + '?text=' + msg, '_blank');
-    }
-    else if (ol.indexOf('proyectos') > -1 || ol.indexOf('portafolio') > -1) {
-      botSay(hola() + 'Con gusto! Aqui te muestro los proyectos que hemos entregado.', null);
-      setTimeout(function() { var el = document.getElementById('portafolio'); if (el) el.scrollIntoView({ behavior:'smooth' }); }, 1200);
-    }
-    else if (ol.indexOf('agendar') > -1 || ol.indexOf('diagnostico') > -1 || ol.indexOf('gratis') > -1) { flujoNombre(); }
-    else if (ol.indexOf('agregar') > -1) { st.step = 'extra'; botSay('Cuentame los detalles, **' + nombre() + '**. Todo lo que me digas le llega al arquitecto:', []); }
-    else if (ol.indexOf('menos de 80') > -1) { st.area = 70;  st.step = 'casa_pisos'; botSay('Cuantos pisos quieres?', ['1 piso','2 pisos']); }
-    else if (ol.indexOf('80 a 150') > -1)    { st.area = 120; st.step = 'casa_pisos'; botSay('Cuantos pisos quieres?', ['1 piso','2 pisos']); }
-    else if (ol.indexOf('150 a 250') > -1)   { st.area = 200; st.step = 'casa_pisos'; botSay('Cuantos pisos quieres?', ['1 piso','2 pisos']); }
-    else if (ol.indexOf('mas de 250') > -1)  { st.area = 300; st.step = 'casa_pisos'; botSay('Cuantos pisos quieres?', ['1 piso','2 pisos']); }
-    else if (ol.indexOf('no lo se') > -1)    { st.area = 120; st.step = 'casa_acab';  botSay(hola() + 'Sin problema, usamos 120 m2 como referencia. Que nivel de acabados imaginas?', ['Basico (funcional)','Medio (confortable)','Alto (premium)','Lujo (exclusivo)']); }
-    else if ((ol === '1 piso' || ol === '2 pisos') && st.step === 'casa_pisos') {
-      st.proy = 'casa_' + ol.replace(' ', '_');
-      st.step = 'casa_acab';
-      botSay(hola() + 'Bien anotado. Que nivel de acabados imaginas para tu casa?', ['Basico (funcional)','Medio (confortable)','Alto (premium)','Lujo (exclusivo)']);
-    }
-    else if ((ol.indexOf('basico') > -1 || ol.indexOf('medio') > -1 || ol.indexOf('alto') > -1 || ol.indexOf('lujo') > -1) && st.step === 'casa_acab') {
-      var acab = ol.indexOf('basico') > -1 ? 'basico' : ol.indexOf('medio') > -1 ? 'medio' : ol.indexOf('alto') > -1 ? 'alto' : 'lujo';
-      var pisos = st.proy && st.proy.indexOf('2_pisos') > -1 ? 2 : 1;
-      flujoCalculo('residencial', acab, st.area || 120, pisos);
-    }
-    else if (st.step === 'costos_tipo') {
-      if (ol.indexOf('casa') > -1) { st.proy = 'residencial'; st.step = 'cas_area2'; botSay(hola() + 'Cuantos m2 aproximados?', ['Menos de 80 m2','80 a 150 m2','150 a 250 m2','Mas de 250 m2']); }
-      else if (ol.indexOf('comercial') > -1) { st.proy = 'comercial'; st.step = 'cas_area2'; botSay(hola() + 'Cuantos m2 aproximados?', ['Menos de 100 m2','100 a 300 m2','Mas de 300 m2']); }
-      else { st.proy = 'institucional'; st.step = 'cas_area2'; botSay(hola() + 'Cuantos m2 aproximados?', ['Menos de 200 m2','200 a 500 m2','Mas de 500 m2']); }
-    }
-    else if (st.step === 'cas_area2') {
-      var a2 = ol.indexOf('menos de 80') > -1 ? 70 : ol.indexOf('80 a 150') > -1 ? 120 : ol.indexOf('150 a 250') > -1 ? 200 : ol.indexOf('menos de 100') > -1 ? 80 : ol.indexOf('100 a 300') > -1 ? 200 : ol.indexOf('menos de 200') > -1 ? 150 : ol.indexOf('200 a 500') > -1 ? 350 : 400;
-      flujoCalculo(st.proy || 'residencial', 'medio', a2, 1);
-    }
-    else if (st.step === 'lote' || st.step === 'institucional' || st.step === 'remodelacion' || st.step === 'comercial_tipo') {
-      st.proy += ' - ' + o;
-      flujoNombre();
-    }
-    else if (ol.indexOf('cuanto tiempo') > -1 || ol.indexOf('demora') > -1) { flujoObjecion('tiempo'); }
-    else { flujoNombre(); }
+    fetch(GEMINI_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        system_instruction: { parts: [{ text: SYSTEM_PROMPT }] },
+        contents: history,
+        generationConfig: { maxOutputTokens: 350, temperature: 0.75 }
+      })
+    })
+    .then(function (res) { return res.json(); })
+    .then(function (data) {
+      var text = '';
+      try { text = data.candidates[0].content.parts[0].text; }
+      catch (e) { text = 'Disculpa, tuve un problema. Escribe al **3163227277** por WhatsApp.'; }
+      history.push({ role: 'model', parts: [{ text: text }] });
+      callback(text);
+    })
+    .catch(function () {
+      callback('Disculpa, no pude conectarme. Escribe al **3163227277** por WhatsApp.');
+    });
   }
 
+  // ══ HANDLER PRINCIPAL ════════════════════════════════════════════════════════
+  function handleInput(val) {
+    var vl = val.toLowerCase();
 
-  function flujoPlanos() {
-    st.step = 'diseno';
-    st.proy = 'solo_diseno';
-    botSay(hola() + 'El paquete de diseno incluye todo lo que necesitas:\n\n- Planos arquitectonicos\n- Planos estructurales y memorias\n- Planos hidraulicos y electricos\n- Gestion de licencia\n\nHonorarios: **8% a 12%** del valor de la obra. Te lo especifico en el diagnostico gratuito.',
-      ['Cuanto cuesta el diseno exactamente','Tambien quiero la construccion','Agendar diagnostico GRATIS']);
-  }
+    // Flujos hardcoded de captura
+    if (st.step === 'nombre') { st.nombre = val.trim(); pedirTel(); return; }
+    if (st.step === 'tel')    { st.tel    = val.trim(); mostrarFinal(); return; }
 
-  function flujoPago() {
-    botSay(hola() + 'La estructura de pago es clara:\n\n- **30%** anticipo al firmar\n- **30%** al llegar a estructura\n- **30%** al llegar a acabados\n- **10%** a la entrega final\n\nCada pago corresponde a trabajo ejecutado.',
-      ['Agendar diagnostico GRATIS','Cuanto cuesta','Tengo otra pregunta']);
-  }
-
-  function flujoZona(zona) {
-    botSay(hola() + 'Si, trabajamos en **' + zona + '** y en toda el area metropolitana. El Arq. Valero visita personalmente cada obra.\n\nTienes un proyecto en esa zona?',
-      ['Si, quiero hablar del proyecto','Ver proyectos en la zona','Agendar diagnostico GRATIS']);
-  }
-
-  function flujoMateriales() {
-    botSay(hola() + 'Los materiales van segun el nivel que eliges:\n\n- **Basico:** estandar nacional, duradero\n- **Medio:** linea media, mejor terminacion\n- **Alto:** ceramicas importadas, herrajes premium\n- **Lujo:** marmoles, domotica, equipos europeos\n\nTu decides segun tu presupuesto.',
-      ['Ver estimado de costos','Agendar diagnostico GRATIS','Tengo otra pregunta']);
-  }
-
-  function flujoUrgente() {
-    botSay(hola() + 'Entiendo la urgencia. Lo mas rapido que puedo hacer por ti **hoy mismo** es el diagnostico gratuito — con eso defines si tu proyecto es viable, cuanto cuesta y cuanto demora.\n\nTodo lo demas depende del diagnostico. Cuanto antes lo hagamos, antes arrancamos.',
-      ['Agendar ahora por WhatsApp','Llenar el formulario','Tengo otra pregunta']);
-  }
-
-  function flujoFinanciamiento() {
-    botSay(hola() + 'Para financiamiento puedes usar:\n\n- **Davivienda / Bancolombia** - credito constructor\n- **FNA** - empleados publicos\n- **Leasing habitacional** - proyectos de inversion\n\nEn el diagnostico te doy el estimado que necesitas para el banco.',
-      ['Agendar diagnostico GRATIS','Cuanto cuesta mi proyecto','Tengo otra pregunta']);
-  }
-
-
-  function flujoPortafolio(categoria) {
-    var msgs2 = {
-      residencial: hola() + 'Aqui te muestro las casas que hemos construido en Santander. Proyectos reales, no renders.',
-      comercial:   hola() + 'Aqui puedes ver los proyectos comerciales que hemos entregado: hoteles, ferreterias, centros de convenciones.',
-      institucional: hola() + 'Aqui estan las obras institucionales y publicas que hemos ejecutado en Santander.',
-      general:     hola() + 'Con gusto. Aqui estan todos nuestros proyectos entregados. Obras reales en Santander.'
-    };
-    var txt = msgs2[categoria] || msgs2.general;
-    botSay(txt, ['Me interesa algo similar','Agendar diagnostico GRATIS']);
-    setTimeout(function() {
-      var el = document.getElementById('portafolio');
-      if (el) el.scrollIntoView({ behavior:'smooth' });
-      // Activar filtro si existe
-      var filtros = { residencial:'residencial', comercial:'comercial', institucional:'institucional' };
-      if (filtros[categoria]) {
-        setTimeout(function() {
-          var btn = document.querySelector('[data-cat="' + filtros[categoria] + '"]');
-          if (btn && btn.tagName !== 'DIV') btn.click();
-        }, 800);
+    // Opciones del mensaje final
+    if (st.step === 'final') {
+      if (vl.indexOf('whatsapp') > -1) {
+        var msg = encodeURIComponent('Hola Arq. Javier, soy ' + st.nombre + '. Tel: ' + st.tel + '. Quiero el diagnostico gratuito.');
+        window.open('https://wa.me/573163227277?text=' + msg, '_blank');
+        return;
       }
-    }, 1200);
-  }
+      if (vl.indexOf('agregar') > -1) {
+        st.step = 'chat';
+        botSay('Cuentame los detalles de tu proyecto:', []);
+        return;
+      }
+    }
 
-  function processText(val) {
-    var vl = val.toLowerCase()
-                .replace(/á/g,'a').replace(/é/g,'e').replace(/í/g,'i')
-                .replace(/ó/g,'o').replace(/ú/g,'u').replace(/ñ/g,'n');
-
-    // ── Captura de datos ────────────────────────────────────────────────────
-    if (st.step === 'nombre') { st.nombre = val.trim(); flujoTel(); return; }
-    if (st.step === 'tel')    { st.tel    = val.trim(); flujoFinal(); return; }
-    if (st.step === 'extra')  { st.proy  += ' - ' + val.trim(); flujoFinal(); return; }
-
-    // ── Area numerica en texto libre ────────────────────────────────────────
-    var numMatch = vl.match(/(\d+)\s*m/);
-    if (numMatch && st.step === 'casa_area') {
-      st.area = parseInt(numMatch[1]);
-      st.step = 'casa_pisos';
-      botSay(hola() + '**' + st.area + ' m2**, perfecto. Cuantos pisos quieres?', ['1 piso','2 pisos']);
+    // Portafolio directo
+    if (vl.indexOf('portafolio') > -1 || vl.indexOf('ver proyecto') > -1 || vl.indexOf('ver casa') > -1) {
+      botSay('Con gusto! Aqui te muestro los proyectos reales.', null);
+      setTimeout(function () {
+        var el = document.getElementById('portafolio');
+        if (el) el.scrollIntoView({ behavior: 'smooth' });
+      }, 800);
       return;
     }
 
-    // ── OBJECIONES ──────────────────────────────────────────────────────────
-    if (vl.indexOf('caro') > -1 || vl.indexOf('costoso') > -1 || vl.indexOf('barato') > -1 || vl.indexOf('economico') > -1 || vl.indexOf('muy caro') > -1)
-      { flujoObjecion('caro'); return; }
+    // Todo lo demas: IA Gemini
+    addMsg(val, 'usr');
+    var typing = showTyping();
 
-    if (vl.indexOf('comparando') > -1 || vl.indexOf('cotizando') > -1 || vl.indexOf('otras empresas') > -1 || vl.indexOf('otro arquitecto') > -1)
-      { flujoObjecion('comparando'); return; }
-
-    if (vl.indexOf('licencia') > -1 || vl.indexOf('permiso') > -1 || vl.indexOf('curaduria') > -1 || vl.indexOf('curaduría') > -1 || vl.indexOf('tramite') > -1 || vl.indexOf('norma') > -1 || vl.indexOf('nsr') > -1)
-      { flujoObjecion('licencia'); return; }
-
-    if (vl.indexOf('garantia') > -1 || vl.indexOf('garantiza') > -1 || vl.indexOf('responde') > -1 || vl.indexOf('responsabilidad') > -1)
-      { flujoObjecion('garantia'); return; }
-
-    if (vl.indexOf('cuanto demora') > -1 || vl.indexOf('cuanto tiempo') > -1 || vl.indexOf('plazo') > -1 || vl.indexOf('meses') > -1 || vl.indexOf('demora') > -1)
-      { flujoObjecion('tiempo'); return; }
-
-    // ── PORTAFOLIO CONTEXTUAL ────────────────────────────────────────────────
-    if (vl.indexOf('ver casa') > -1 || vl.indexOf('casas construidas') > -1 || vl.indexOf('ejemplo') > -1 || vl.indexOf('foto') > -1)
-      { flujoPortafolio('residencial'); return; }
-
-    if (vl.indexOf('ver comercial') > -1 || vl.indexOf('ver local') > -1 || vl.indexOf('ver hotel') > -1)
-      { flujoPortafolio('comercial'); return; }
-
-    if (vl.indexOf('ver institucional') > -1 || vl.indexOf('obra publica') > -1)
-      { flujoPortafolio('institucional'); return; }
-
-    if (vl.indexOf('portafolio') > -1 || vl.indexOf('proyectos') > -1 || vl.indexOf('trabajo') > -1 || vl.indexOf('experiencia') > -1 || vl.indexOf('referencia') > -1)
-      { flujoPortafolio('general'); return; }
-
-    // ── INTENCIONES PRINCIPALES ─────────────────────────────────────────────
-    if (vl.indexOf('hola') > -1 || vl.indexOf('buenas') > -1 || vl.indexOf('buenos') > -1 || vl.indexOf('buen dia') > -1)
-      { flujoInicio(); return; }
-
-    if (vl.indexOf('casa') > -1 || vl.indexOf('vivienda') > -1 || vl.indexOf('residencia') > -1 || vl.indexOf('unifamiliar') > -1)
-      { flujoCasa(); return; }
-
-    if (vl.indexOf('lote') > -1 || vl.indexOf('terreno') > -1 || vl.indexOf('predio') > -1)
-      { flujoLote(); return; }
-
-    if (vl.indexOf('remodel') > -1 || vl.indexOf('ampliar') > -1 || vl.indexOf('ampliacion') > -1 || vl.indexOf('fachada') > -1)
-      { flujoRemodelacion(); return; }
-
-    if (vl.indexOf('local') > -1 || vl.indexOf('comercial') > -1 || vl.indexOf('hotel') > -1 || vl.indexOf('bodega') > -1 || vl.indexOf('oficina') > -1 || vl.indexOf('consultorio') > -1)
-      { flujoComercial(); return; }
-
-    if (vl.indexOf('alcaldia') > -1 || vl.indexOf('municipio') > -1 || vl.indexOf('publico') > -1 || vl.indexOf('estado') > -1 || vl.indexOf('cabildo') > -1 || vl.indexOf('contrato') > -1)
-      { flujoInstitucional(); return; }
-
-    if (vl.indexOf('plano') > -1 || vl.indexOf('diseno') > -1 || vl.indexOf('arquitectonico') > -1)
-      { flujoPlanos(); return; }
-
-    if (vl.indexOf('precio') > -1 || vl.indexOf('costo') > -1 || vl.indexOf('cuanto vale') > -1 || vl.indexOf('cuanto cuesta') > -1 || vl.indexOf('presupuesto') > -1 || vl.indexOf('valor') > -1)
-      { flujoCostos(); return; }
-
-    if (vl.indexOf('pago') > -1 || vl.indexOf('anticipo') > -1 || vl.indexOf('cuota') > -1 || vl.indexOf('como se paga') > -1)
-      { flujoPago(); return; }
-
-    if (vl.indexOf('financiamiento') > -1 || vl.indexOf('credito') > -1 || vl.indexOf('banco') > -1 || vl.indexOf('prestamo') > -1)
-      { flujoFinanciamiento(); return; }
-
-    if (vl.indexOf('material') > -1 || vl.indexOf('acabado') > -1 || vl.indexOf('ceramica') > -1 || vl.indexOf('piso') > -1)
-      { flujoMateriales(); return; }
-
-    if (vl.indexOf('urgente') > -1 || vl.indexOf('rapido') > -1 || vl.indexOf('pronto') > -1 || vl.indexOf('ya') > -1)
-      { flujoUrgente(); return; }
-
-    // ── ZONAS GEOGRÁFICAS ────────────────────────────────────────────────────
-    if (vl.indexOf('floridablanca') > -1) { flujoZona('Floridablanca'); return; }
-    if (vl.indexOf('giron') > -1)         { flujoZona('Giron'); return; }
-    if (vl.indexOf('piedecuesta') > -1)   { flujoZona('Piedecuesta'); return; }
-    if (vl.indexOf('barrancabermeja') > -1 || vl.indexOf('barranca') > -1) { flujoZona('Barrancabermeja'); return; }
-    if (vl.indexOf('bucaramanga') > -1)   { flujoZona('Bucaramanga'); return; }
-    if (vl.indexOf('socorro') > -1 || vl.indexOf('palmas') > -1) { flujoZona('Palmas del Socorro'); return; }
-
-    // ── SEGUNDO PISO ─────────────────────────────────────────────────────────
-    if (vl.indexOf('segundo piso') > -1 || vl.indexOf('2 pisos') > -1 || vl.indexOf('dos pisos') > -1) {
-      st.proy = 'casa_2_pisos'; st.step = 'casa_acab';
-      botSay(hola() + 'Casa de 2 pisos, excelente. Que nivel de acabados imaginas?', ['Basico (funcional)','Medio (confortable)','Alto (premium)','Lujo (exclusivo)']);
-      return;
-    }
-
-    // ── DEFAULT INTELIGENTE ─────────────────────────────────────────────────
-    var fallback = nombre()
-      ? ('**' + nombre() + '**, para responderte con precision necesito entender mejor tu proyecto. El Arq. Valero puede atenderte directamente — dejame tu numero de WhatsApp:')
-      : 'Entiendo tu consulta. Para darte la mejor respuesta, el Arq. Javier Valero te atiende directamente.\n\nComo te llamas?';
-    botSay(fallback, []);
-    st.step = st.nombre ? 'tel' : 'nombre';
+    callGemini(val, function (response) {
+      removeTyping();
+      // Detectar marcador de captura de lead
+      var wantsLead = response.indexOf('##LEAD##') > -1;
+      var cleanResponse = response.replace('##LEAD##', '').trim();
+      botSay(cleanResponse, null);
+      if (wantsLead) {
+        setTimeout(pedirNombre, 1200);
+      }
+    });
   }
 
   function sendMsg() {
     var val = inp.value.trim();
     if (!val) return;
     inp.value = '';
-    addMsg(val, 'usr');
-    setTimeout(function() { processText(val); }, 200);
+    if (st.step !== 'nombre' && st.step !== 'tel') {
+      // Para steps de captura, addMsg se hace en handleInput
+      // Para chat libre, lo agregamos aqui
+    }
+    handleInput(val);
   }
 
-  document.getElementById('jchatSend').onclick = sendMsg;
-  inp.addEventListener('keypress', function(e) { if (e.key === 'Enter') sendMsg(); });
+  // ══ INICIO ══════════════════════════════════════════════════════════════════
+  function flujoInicio() {
+    var txt = dentroHorario
+      ? 'Hola! Soy el asistente del **Arq. Javier Valero**. Estamos disponibles ahora mismo.\n\nCuentame sobre tu proyecto — te respondo al instante.'
+      : 'Hola! Ya termine mi jornada, pero no te vayas.\n\nDejame los datos de tu proyecto y el Arq. Valero te contacta **manana en la manana** — eres el primero en la lista.';
+    botSay(txt, ['Quiero construir mi casa', 'Tengo un proyecto comercial', 'Tengo un lote', 'Quiero remodelar', 'Cuanto cuesta construir', 'Hablar con el arquitecto']);
+  }
 
-  window.jchatToggle = function() {
+  document.getElementById('jchatSend').onclick = function () { sendMsg(); };
+  inp.addEventListener('keypress', function (e) { if (e.key === 'Enter') sendMsg(); });
+
+  window.jchatToggle = function () {
     open = !open;
     document.getElementById('jchat-box').classList.toggle('open', open);
     document.getElementById('jchat-badge').style.display = 'none';
-    if (open && msgs.children.length === 0) {
-      setTimeout(flujoInicio, 400);
-    }
+    if (open && msgs.children.length === 0) setTimeout(flujoInicio, 400);
   };
 
 })();
 
-  
   </script>
 </body>
 </html>
