@@ -1253,7 +1253,7 @@
       <div class="footer-bottom">
         <p>© 2025 Diseños Java Construccion SAS. Todos los derechos reservados.</p>
         <span class="nit-badge">NIT 900.896.963-7 | Matrícula CCB 05-332392-16</span>
-        <span style="font-size:0.78rem;color:rgba(255,255,255,0.28);display:none;"><i class="fa-regular fa-eye" style="margin-right:4px;"></i>Visitas: <span id="contador-visitas-num">—</span></span>
+        <span style="font-size:0.78rem;color:rgba(255,255,255,0.45);"><i class="fa-regular fa-eye" style="margin-right:4px;"></i>Visitas: <span id="contador-visitas-num">—</span></span>
       </div>
     </div>
   </footer>
@@ -1806,19 +1806,25 @@
 (function () {
   var el = document.getElementById('contador-visitas-num');
   if (!el) return;
-  var base = 'https://api.counterapi.dev/v1/arqjava-github-io/visitas';
   var contada = false;
   try { contada = sessionStorage.getItem('visita_contada') === '1'; } catch (e) {}
-  fetch(contada ? base : base + '/up')
-    .then(function (r) { return r.json(); })
-    .then(function (d) {
-      if (d && typeof d.count === 'number') {
-        el.textContent = d.count.toLocaleString('es-CO');
-        el.parentNode.style.display = '';
+  var fuentes = [
+    { url: 'https://api.counterapi.dev/v1/arqjava-github-io/visitas' + (contada ? '' : '/up'), campo: 'count' },
+    { url: 'https://abacus.jasoncameron.dev/' + (contada ? 'get' : 'hit') + '/arqjava-github-io/visitas', campo: 'value' }
+  ];
+  function intentar(i) {
+    if (i >= fuentes.length) return;
+    fetch(fuentes[i].url)
+      .then(function (r) { if (!r.ok) throw new Error('http'); return r.json(); })
+      .then(function (d) {
+        var n = d && d[fuentes[i].campo];
+        if (typeof n !== 'number') throw new Error('formato');
+        el.textContent = n.toLocaleString('es-CO');
         try { sessionStorage.setItem('visita_contada', '1'); } catch (e) {}
-      }
-    })
-    .catch(function () {});
+      })
+      .catch(function () { intentar(i + 1); });
+  }
+  intentar(0);
 })();
   </script>
 </body>
